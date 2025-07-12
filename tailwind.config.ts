@@ -156,6 +156,7 @@ export default {
 			},
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],
+				'arabic': ['Noto Sans Arabic', 'sans-serif'],
 				'display': ['Brockmann', 'SF Pro Display', 'Inter', 'sans-serif'],
 				'brockmann': ['Brockmann', 'serif'],
 				'playfair': ['"Playfair Display"', 'serif'],
