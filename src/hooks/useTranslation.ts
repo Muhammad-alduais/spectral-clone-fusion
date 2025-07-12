@@ -3,6 +3,7 @@ import enTranslations from '../translations/en.json';
 import arTranslations from '../translations/ar.json';
 
 type Language = 'en' | 'ar';
+type TranslationKey = string;
 
 const translations = {
   en: enTranslations,
@@ -32,7 +33,7 @@ export const useTranslation = () => {
     }
   }, [language]);
 
-  const t = (key: string): any => {
+  const t = (key: TranslationKey): string => {
     const keys = key.split('.');
     let value: any = translations[language];
     
@@ -53,7 +54,7 @@ export const useTranslation = () => {
       }
     }
     
-    return value !== undefined ? value : key;
+    return typeof value === 'string' ? value : key;
   };
 
   const changeLanguage = (newLanguage: Language) => {
