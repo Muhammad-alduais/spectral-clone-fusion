@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, MessageCircle, Calendar, Users, Send, CheckCircle, AlertCircle } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { toast } from "sonner";
-import { useTranslation } from "@/lib/translations";
 
 const Contact = () => {
-  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -229,9 +227,9 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">10</span>
             <span>Contact Us</span>
           </div>
-          <h2 className="section-title mb-4">{t('contactTitle')}</h2>
+          <h2 className="section-title mb-4">Get In Touch</h2>
           <p className="section-subtitle mx-auto">
-            {t('contactSubtitle')}
+            Ready to transform your business? Contact us today to get started.
           </p>
         </div>
 
@@ -243,40 +241,40 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('name')} <span className="text-red-500">*</span>
+                    Full Name <span className="text-red-500">*</span>
                   </label>
                   <input 
                     type="text" 
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    placeholder={t('namePlaceholder')}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent transition-all duration-200" 
                     required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('email')} <span className="text-red-500">*</span>
+                    Email <span className="text-red-500">*</span>
                   </label>
                   <input 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder={t('emailPlaceholder')}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent transition-all duration-200" 
                     required
                   />
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('company')}</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
                   <input 
                     type="text" 
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    placeholder={t('companyPlaceholder')}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent transition-all duration-200" 
                   />
                 </div>
                 <div>
@@ -308,7 +306,7 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('message')} <span className="text-red-500">*</span>
+                  Message <span className="text-red-500">*</span>
                 </label>
                 <textarea 
                   rows={4} 
@@ -316,7 +314,7 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent transition-all duration-200" 
-                  placeholder={t('messagePlaceholder')}
+                  placeholder="Tell us about your project..."
                   required
                 ></textarea>
               </div>
@@ -352,7 +350,7 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
                 ) : (
                   <>
                     <Send className="w-4 h-4 mr-2" />
-                    {t('sendMessage')}
+                    Send Message
                   </>
                 )}
               </button>
