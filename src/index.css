@@ -493,3 +493,128 @@
     @apply text-lg md:text-xl;
   }
 }
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .nav-link::after {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] .pulse-chip {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .pulse-chip span:first-child {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* Smooth language transition */
+* {
+  transition: text-align 0.3s ease, direction 0.3s ease;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex-col {
+  flex-direction: column;
+}
+
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Language toggle specific RTL adjustments */
+[dir="rtl"] .language-toggle {
+  flex-direction: row-reverse;
+}
+
+/* Form RTL adjustments */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+  text-align: right;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-center {
+  text-align: center;
+}
+
+/* Button RTL adjustments */
+[dir="rtl"] .button-primary,
+[dir="rtl"] .button-secondary {
+  flex-direction: row-reverse;
+}
+
+/* Navigation RTL adjustments */
+[dir="rtl"] .nav-link {
+  text-align: right;
+}
+
+/* Card RTL adjustments */
+[dir="rtl"] .feature-card,
+[dir="rtl"] .glass-card {
+  text-align: right;
+}
+
+/* List RTL adjustments */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+/* Preserve specific LTR elements */
+.preserve-ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Email and phone numbers should remain LTR */
+[dir="rtl"] a[href^="mailto:"],
+[dir="rtl"] a[href^="tel:"] {
+  direction: ltr;
+  text-align: left;
+}

@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { OptimizedBackground } from "./ui";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const ValueSection = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsContainerRef = useRef<HTMLDivElement>(null);
   const [activeCardIndex, setActiveCardIndex] = useState(0);
@@ -99,15 +101,15 @@ const ValueSection = () => {
                 animationDelay: "0.1s"
               }}>
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span>
-                <span>360° VALUE</span>
+                <span>{t('value.badge')}</span>
               </div>
             </div>
             
             <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
-              We don't just build software
+              {t('value.title')}
             </h2>
             <p className="text-xl text-gray-600 mb-4">
-              We build your business future
+              {t('value.subtitle')}
             </p>
           </div>
           
@@ -130,20 +132,19 @@ const ValueSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">AI Features</span>
+                  <span className="text-sm font-medium">{t('value.aiFeatures.title').split(' ')[0]} {t('value.aiFeatures.title').split(' ')[1]}</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    Intelligent automation that learns from your business
+                    {t('value.aiFeatures.title')}
                   </h3>
                   <ul className="text-white/90 space-y-2">
-                    <li>• Automatic Forecasting</li>
-                    <li>• Decision Automation</li>
-                    <li>• Smart Workflows</li>
-                    <li>• Advanced Analytics</li>
+                    {t('value.aiFeatures.items').map((item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -168,20 +169,19 @@ const ValueSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">Unmatched Speed</span>
+                  <span className="text-sm font-medium">{t('value.speed.title').split(' ')[0]} {t('value.speed.title').split(' ')[1]}</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    From setup to results in record time
+                    {t('value.speed.title')}
                   </h3>
                   <ul className="text-white/90 space-y-2">
-                    <li>• Rapid Deployment</li>
-                    <li>• Immediate ROI</li>
-                    <li>• Instant Benefits</li>
-                    <li>• Proven Methodology</li>
+                    {t('value.speed.items').map((item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -206,20 +206,19 @@ const ValueSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">Cultural Fit</span>
+                  <span className="text-sm font-medium">{t('value.cultural.title').split(' ')[0]} {t('value.cultural.title').split(' ')[1]}</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    Built for <span className="text-white">Arabic businesses</span>
+                    <span dangerouslySetInnerHTML={{ __html: t('value.cultural.title') }} />
                   </h3>
                   <ul className="text-white/90 space-y-2">
-                    <li>• Bilingual Support</li>
-                    <li>• Native RTL Interfaces</li>
-                    <li>• Local Compliance</li>
-                    <li>• Cultural Alignment</li>
+                    {t('value.cultural.items').map((item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -244,20 +243,19 @@ const ValueSection = () => {
               
               <div className="absolute top-4 right-4 z-20">
                 <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white">
-                  <span className="text-sm font-medium">Easy Adoption</span>
+                  <span className="text-sm font-medium">{t('value.adoption.title').split(' ')[0]} {t('value.adoption.title').split(' ')[1]}</span>
                 </div>
               </div>
               
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    Simple, intuitive, and <span className="text-white">user-friendly</span>
+                    <span dangerouslySetInnerHTML={{ __html: t('value.adoption.title') }} />
                   </h3>
                   <ul className="text-white/90 space-y-2">
-                    <li>• Intuitive Design</li>
-                    <li>• Simplified Training</li>
-                    <li>• User-Friendly Interface</li>
-                    <li>• Ongoing Support</li>
+                    {t('value.adoption.items').map((item: string, index: number) => (
+                      <li key={index}>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>

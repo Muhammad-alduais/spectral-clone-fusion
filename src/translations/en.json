@@ -1,0 +1,399 @@
+{
+  "nav": {
+    "home": "Home",
+    "value": "360° Value",
+    "platform": "Platform",
+    "industries": "Industries",
+    "solutions": "Solutions",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "ERP Solutions",
+    "title": "Intelligent Operations.<br />Seamless Transformation",
+    "subtitle": "AI-powered ERP system designed for your workflow. Streamline operations, boost efficiency, and future-proof your business with MovinWare's intelligent solutions.",
+    "cta": "Start Your Journey"
+  },
+  "value": {
+    "badge": "360° VALUE",
+    "title": "We don't just build software",
+    "subtitle": "We build your business future",
+    "aiFeatures": {
+      "title": "Intelligent automation that learns from your business",
+      "items": [
+        "• Automatic Forecasting",
+        "• Decision Automation", 
+        "• Smart Workflows",
+        "• Advanced Analytics"
+      ]
+    },
+    "speed": {
+      "title": "From setup to results in record time",
+      "items": [
+        "• Rapid Deployment",
+        "• Immediate ROI",
+        "• Instant Benefits",
+        "• Proven Methodology"
+      ]
+    },
+    "cultural": {
+      "title": "Built for Arabic businesses",
+      "items": [
+        "• Bilingual Support",
+        "• Native RTL Interfaces",
+        "• Local Compliance",
+        "• Cultural Alignment"
+      ]
+    },
+    "adoption": {
+      "title": "Simple, intuitive, and user-friendly",
+      "items": [
+        "• Intuitive Design",
+        "• Simplified Training",
+        "• User-Friendly Interface",
+        "• Ongoing Support"
+      ]
+    }
+  },
+  "platform": {
+    "badge": "Platform Capabilities",
+    "title": "Everything you need,<br />beautifully integrated",
+    "subtitle": "A comprehensive platform designed for modern businesses with advanced features that grow with you",
+    "coreModules": {
+      "title": "Core Modules",
+      "description": "Essential business modules for complete operations management and workflow automation.",
+      "timeline": "Core Foundation"
+    },
+    "aiFeatures": {
+      "title": "AI Features", 
+      "description": "Advanced AI technology that learns and optimizes your business processes automatically.",
+      "timeline": "Smart Enhancement"
+    },
+    "integration": {
+      "title": "Integration Hub",
+      "description": "Connect with 500+ platforms and systems seamlessly for unified data flow.",
+      "timeline": "Seamless Connection"
+    },
+    "mobile": {
+      "title": "Mobile & Cloud Platform",
+      "description": "Access your business data anywhere with 99.9% uptime guarantee and offline capabilities.",
+      "timeline": "Anywhere Access"
+    },
+    "stats": {
+      "integrations": "500+",
+      "integrationsLabel": "API Integrations",
+      "integrationsDesc": "Third-party connections available",
+      "uptime": "99.9%",
+      "uptimeLabel": "Uptime SLA",
+      "uptimeDesc": "Enterprise-grade reliability",
+      "monitoring": "24/7",
+      "monitoringLabel": "System Monitoring",
+      "monitoringDesc": "Continuous performance tracking",
+      "sync": "Real-time",
+      "syncLabel": "Data Sync",
+      "syncDesc": "Instant updates across devices"
+    }
+  },
+  "industries": {
+    "badge": "Industries",
+    "title": "Tailored for<br />every sector",
+    "subtitle": "Industry-specific solutions designed to meet the unique challenges and requirements of your business sector",
+    "education": {
+      "title": "Education",
+      "description": "Complete educational management solutions for modern institutions and learning environments.",
+      "timeline": "500+ Institutions"
+    },
+    "retail": {
+      "title": "Retail",
+      "description": "End-to-end retail management for omnichannel success and customer satisfaction.",
+      "timeline": "1,000+ Stores"
+    },
+    "manufacturing": {
+      "title": "Manufacturing",
+      "description": "Smart manufacturing solutions for Industry 4.0 transformation and operational excellence.",
+      "timeline": "200+ Factories"
+    },
+    "logistics": {
+      "title": "Logistics",
+      "description": "Intelligent logistics and supply chain optimization platform for seamless operations.",
+      "timeline": "300+ Companies"
+    },
+    "companySizes": {
+      "title": "Trusted by companies of all sizes",
+      "subtitle": "From startups to enterprises, we scale with your business needs and provide tailored solutions for every growth stage",
+      "startups": "50+",
+      "startupsLabel": "Startups",
+      "startupsDesc": "Growing businesses ready to scale",
+      "smes": "500+",
+      "smesLabel": "SMEs", 
+      "smesDesc": "Established mid-market companies",
+      "enterprises": "100+",
+      "enterprisesLabel": "Enterprises",
+      "enterprisesDesc": "Large organizations with complex needs"
+    }
+  },
+  "solutions": {
+    "badge": "ERP Solutions",
+    "title": "Complete business<br />solutions",
+    "subtitle": "Integrated modules that work together seamlessly to power every aspect of your business operations",
+    "accounting": {
+      "title": "Accounting & Finance",
+      "description": "Complete financial management with real-time insights.",
+      "timeline": "Full Integration"
+    },
+    "hr": {
+      "title": "Human Resources",
+      "description": "End-to-end HR management for the complete employee lifecycle.",
+      "timeline": "Complete HR Suite"
+    },
+    "sales": {
+      "title": "Sales & CRM",
+      "description": "AI-powered sales and customer relationship management.",
+      "timeline": "Sales Optimization"
+    },
+    "inventory": {
+      "title": "Inventory Management",
+      "description": "Smart inventory optimization with real-time tracking.",
+      "timeline": "Smart Inventory"
+    },
+    "manufacturing": {
+      "title": "Manufacturing",
+      "description": "Intelligent production management and quality control.",
+      "timeline": "Production Excellence"
+    },
+    "assets": {
+      "title": "Asset Management",
+      "description": "Predictive asset management and maintenance optimization.",
+      "timeline": "Asset Optimization"
+    },
+    "integration": {
+      "title": "Seamless integration across all modules",
+      "subtitle": "All modules share data in real-time, providing a unified view of your business operations with complete transparency and control",
+      "stats": {
+        "integration": "100%",
+        "integrationLabel": "Module Integration",
+        "integrationDesc": "Seamless data flow across all modules",
+        "updates": "Real-time",
+        "updatesLabel": "Data Updates", 
+        "updatesDesc": "Instant synchronization everywhere",
+        "database": "Single",
+        "databaseLabel": "Database",
+        "databaseDesc": "Unified source of truth for all data",
+        "workflows": "Custom",
+        "workflowsLabel": "Workflows",
+        "workflowsDesc": "Tailored to your business processes"
+      }
+    }
+  },
+  "services": {
+    "badge": "Professional Services",
+    "title": "Expert services for<br />successful implementation",
+    "subtitle": "Our certified professionals ensure your ERP implementation is delivered on time, within budget, and exceeds expectations",
+    "implementation": {
+      "title": "ERP Implementation",
+      "description": "End-to-end implementation with proven methodologies and dedicated project management.",
+      "timeline": "8-12 weeks"
+    },
+    "industry": {
+      "title": "Industry Solutions",
+      "description": "Specialized solutions tailored to your industry's unique requirements and compliance needs.",
+      "timeline": "6-10 weeks"
+    },
+    "ai": {
+      "title": "AI Integration",
+      "description": "Advanced AI capabilities to automate processes and provide intelligent business insights.",
+      "timeline": "4-8 weeks"
+    },
+    "ux": {
+      "title": "UX Design & Localization",
+      "description": "User-centered design with full localization support for Arabic markets.",
+      "timeline": "3-6 weeks"
+    },
+    "migration": {
+      "title": "Data Migration & Integration",
+      "description": "Secure, efficient data migration with seamless third-party system integrations.",
+      "timeline": "2-4 weeks"
+    },
+    "support": {
+      "title": "Support & Maintenance",
+      "description": "Comprehensive support services ensuring optimal system performance and user satisfaction.",
+      "timeline": "Ongoing"
+    },
+    "methodology": {
+      "title": "Our Service Methodology",
+      "subtitle": "A structured approach that ensures quality delivery and client satisfaction at every stage",
+      "steps": {
+        "consultation": "Consultation",
+        "consultationDesc": "Understanding your requirements",
+        "planning": "Planning",
+        "planningDesc": "Detailed project roadmap",
+        "execution": "Execution",
+        "executionDesc": "Professional implementation",
+        "delivery": "Delivery",
+        "deliveryDesc": "Quality assurance & handover",
+        "support": "Support",
+        "supportDesc": "Ongoing maintenance & optimization"
+      }
+    },
+    "stats": {
+      "professionals": "50+",
+      "professionalsLabel": "Certified Professionals",
+      "professionalsDesc": "Expert consultants and developers",
+      "projects": "500+",
+      "projectsLabel": "Successful Projects",
+      "projectsDesc": "Across various industries",
+      "satisfaction": "99%",
+      "satisfactionLabel": "Client Satisfaction",
+      "satisfactionDesc": "Based on project completion surveys"
+    }
+  },
+  "implementation": {
+    "badge": "Implementation Process",
+    "title": "From concept to<br />go-live in 11 weeks",
+    "subtitle": "Our proven methodology ensures successful implementation with minimal disruption to your business",
+    "timeline": {
+      "title": "Implementation Timeline",
+      "discovery": "Discovery",
+      "design": "Design",
+      "development": "Development",
+      "deployment": "Deployment",
+      "support": "Support"
+    },
+    "phases": {
+      "discovery": {
+        "title": "Discovery & Assessment",
+        "duration": "Week 1-2",
+        "description": "We analyze your current processes, identify pain points, and create a detailed implementation roadmap.",
+        "deliverables": "Key Deliverables"
+      },
+      "design": {
+        "title": "Design & Configuration",
+        "duration": "Week 3-5",
+        "description": "Custom workflows, system configuration, and user interface design tailored to your business needs.",
+        "deliverables": "Key Deliverables"
+      },
+      "development": {
+        "title": "Development & Integration",
+        "duration": "Week 6-9",
+        "description": "System development, data migration, third-party integrations, and comprehensive testing.",
+        "deliverables": "Key Deliverables"
+      },
+      "deployment": {
+        "title": "Deployment & Training",
+        "duration": "Week 10-11",
+        "description": "Go-live support with comprehensive user training, system monitoring, and immediate support.",
+        "deliverables": "Key Deliverables"
+      },
+      "optimization": {
+        "title": "Optimization & Support",
+        "duration": "Ongoing",
+        "description": "Continuous optimization, performance monitoring, feature enhancements, and dedicated support.",
+        "deliverables": "Key Deliverables"
+      }
+    },
+    "results": {
+      "title": "Why our process works",
+      "subtitle": "Proven results from our implementation methodology",
+      "faster": "85%",
+      "fasterLabel": "Faster Implementation",
+      "fasterDesc": "Compared to traditional methods",
+      "downtime": "Zero",
+      "downtimeLabel": "Downtime",
+      "downtimeDesc": "Seamless transition process",
+      "adoption": "98%",
+      "adoptionLabel": "User Adoption",
+      "adoptionDesc": "Within first month",
+      "support": "24/7",
+      "supportLabel": "Support",
+      "supportDesc": "Dedicated implementation team"
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What others say",
+    "testimonial1": "MovinWare transformed our production operations, streamlining workflows while our team focuses on strategic growth. 40% increase in efficiency within two months.",
+    "author1": "Sarah Chen",
+    "role1": "VP of Operations, Axion Manufacturing",
+    "testimonial2": "Implementing MovinWare in our logistics centers reduced operational costs by 35% while improving accuracy. The AI-powered insights are game-changing.",
+    "author2": "Michael Rodriguez", 
+    "role2": "Director of Logistics, GlobalShip",
+    "testimonial3": "As a mid-size business, we never thought advanced ERP would be accessible to us. MovinWare changed that with its intuitive design and affordable pricing.",
+    "author3": "Jason Lee",
+    "role3": "CEO, Innovative Solutions Inc."
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your business? Contact us today to get started.",
+    "form": {
+      "title": "Send us a message",
+      "fullName": "Full Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "inquiryType": "Inquiry Type",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message Sent!",
+      "tryAgain": "Try Again",
+      "required": "*"
+    },
+    "inquiryTypes": {
+      "general": "General Inquiry",
+      "erp": "ERP Implementation",
+      "development": "Custom Development",
+      "support": "Support",
+      "partnership": "Partnership",
+      "demo": "Demo Request"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "expert": "Talk to Expert",
+      "expertDesc": "Schedule a call with our experts",
+      "consultation": "Schedule Consultation",
+      "consultationDesc": "Book a free consultation",
+      "whatsapp": "WhatsApp Support",
+      "whatsappDesc": "Get instant support via WhatsApp"
+    },
+    "success": {
+      "title": "Message delivered successfully!",
+      "description": "We've received your message and will respond within 24 hours."
+    },
+    "error": {
+      "title": "Failed to send message",
+      "description": "Please try again or contact us directly at info@movinware.com"
+    },
+    "validation": {
+      "nameRequired": "Please enter your full name",
+      "emailRequired": "Please enter your email address",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Please enter your message"
+    }
+  },
+  "footer": {
+    "description": "AI-powered ERP solutions designed for modern businesses. Streamline operations, boost efficiency, and future-proof your business with intelligent automation.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "copyright": "© 2025 MovinWare. All rights reserved.",
+    "builtBy": "Built entirely by Muhammad Al-Duais"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "getStarted": "Get Started",
+    "scheduleDemo": "Schedule Demo",
+    "requestAccess": "Request Access",
+    "joinWaitlist": "Join Waitlist",
+    "loading": "Loading...",
+    "close": "Close",
+    "menu": "Menu",
+    "language": "Language"
+  }
+}

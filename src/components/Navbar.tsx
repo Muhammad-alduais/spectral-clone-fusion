@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageToggle from "./LanguageToggle";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -76,24 +78,24 @@ const Navbar = () => {
               scrollToTop();
             }}
           >
-            Home
+            {t('nav.home')}
           </a>
-          <a href="#value" className="nav-link">360° Value</a>
-          <a href="#platform" className="nav-link">Platform</a>
-          <a href="#industries" className="nav-link">Industries</a>
-          <a href="#erp-solutions" className="nav-link">Solutions</a>
-          <a href="#services" className="nav-link">Services</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <a href="#value" className="nav-link">{t('nav.value')}</a>
+          <a href="#platform" className="nav-link">{t('nav.platform')}</a>
+          <a href="#industries" className="nav-link">{t('nav.industries')}</a>
+          <a href="#erp-solutions" className="nav-link">{t('nav.solutions')}</a>
+          <a href="#services" className="nav-link">{t('nav.services')}</a>
+          <a href="#contact" className="nav-link">{t('nav.contact')}</a>
         </nav>
 
         {/* Language Switcher - Desktop */}
-        <LanguageSwitcher className="hidden lg:block" />
+        <LanguageToggle className="hidden lg:block" />
 
         {/* Mobile menu button */}
         <button 
           className="lg:hidden text-gray-700 p-3 focus:outline-none" 
           onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? t('common.close') : t('common.menu')}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -107,11 +109,11 @@ const Navbar = () => {
         <div className="flex flex-col h-full pt-16 px-6">
         {/* Mobile Header with Close Button */}
         <div className="flex items-center justify-between py-4 border-b border-gray-200 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
+          <h2 className="text-xl font-semibold text-gray-900">{t('common.menu')}</h2>
           <button 
             onClick={toggleMenu}
             className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
-            aria-label="Close menu"
+            aria-label={t('common.close')}
           >
             <X size={24} className="text-gray-600" />
           </button>
@@ -128,7 +130,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Home
+            {t('nav.home')}
           </a>
           <a 
             href="#value" 
@@ -138,7 +140,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            360° Value
+            {t('nav.value')}
           </a>
           <a 
             href="#platform" 
@@ -148,7 +150,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Platform
+            {t('nav.platform')}
           </a>
           <a 
             href="#industries" 
@@ -158,7 +160,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Industries
+            {t('nav.industries')}
           </a>
           <a 
             href="#erp-solutions" 
@@ -168,7 +170,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Solutions
+            {t('nav.solutions')}
           </a>
           <a 
             href="#services" 
@@ -178,7 +180,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Services
+            {t('nav.services')}
           </a>
           <a 
             href="#contact" 
@@ -188,13 +190,13 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Contact
+            {t('nav.contact')}
           </a>
         </nav>
         
         {/* Language Switcher - Mobile */}
         <div className="mt-8 px-4">
-          <LanguageSwitcher className="w-full" />
+          <LanguageToggle className="w-full" />
         </div>
         
         {/* Mobile Footer */}
