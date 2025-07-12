@@ -48,10 +48,10 @@ const Services = () => {
   }, {
     icon: Palette,
     title: "UX Design & Localization",
-    description: "User-centered design with full localization support for MENA markets.",
+    description: "User-centered design with full localization support for Arabic markets.",
     capabilities: ["User Experience (UX) Design", "Right-to-Left (RTL) Interface Design", "Multi-language Platform Support", "Cultural Adaptation & Localization", "Accessibility Standards Compliance", "Mobile-First Design Approach", "Brand Integration & Customization", "Usability Testing & Optimization"],
     timeline: "3-6 weeks",
-    fullDescription: "Create intuitive, culturally-appropriate user experiences with comprehensive localization for MENA markets. Our design services ensure your platform is not only visually appealing but also accessible, culturally relevant, and optimized for diverse user needs.",
+    fullDescription: "Create intuitive, culturally-appropriate user experiences with comprehensive localization for Arabic markets. Our design services ensure your platform is not only visually appealing but also accessible, culturally relevant, and optimized for diverse user needs.",
     benefits: ["Culturally-adapted interfaces improve user adoption", "RTL design ensures native Arabic experience", "Accessibility compliance reaches broader audiences", "Mobile-first approach maximizes device compatibility"]
   }, {
     icon: Database,
