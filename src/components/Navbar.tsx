@@ -67,7 +67,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden lg:flex space-x-6 xl:space-x-8">
           <a 
             href="#" 
             className="nav-link"
@@ -83,16 +83,15 @@ const Navbar = () => {
           <a href="#industries" className="nav-link">Industries</a>
           <a href="#erp-solutions" className="nav-link">Solutions</a>
           <a href="#services" className="nav-link">Services</a>
-          
           <a href="#contact" className="nav-link">Contact</a>
         </nav>
 
         {/* Language Switcher - Desktop */}
-        <LanguageSwitcher className="hidden md:block" />
+        <LanguageSwitcher className="hidden lg:block" />
 
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-gray-700 p-3 focus:outline-none" 
+          className="lg:hidden text-gray-700 p-3 focus:outline-none" 
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -102,9 +101,10 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
+        "fixed inset-0 z-40 bg-white/95 backdrop-blur-md lg:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
+        <div className="flex flex-col h-full pt-16 px-6">
         {/* Mobile Header with Close Button */}
         <div className="flex items-center justify-between py-4 border-b border-gray-200 mb-8">
           <h2 className="text-xl font-semibold text-gray-900">Menu</h2>
@@ -202,6 +202,7 @@ const Navbar = () => {
           <div className="text-center text-sm text-gray-500">
             © 2025 MovinWare
           </div>
+        </div>
         </div>
       </div>
     </header>
