@@ -518,52 +518,12 @@
   transition: text-align 0.3s ease, direction 0.3s ease;
 }
 
-/* RTL specific adjustments */
-[dir="rtl"] .flex {
-  flex-direction: row-reverse;
+/* Selective RTL adjustments - only for text elements */
+[dir="rtl"] .rtl-text {
+  text-align: right;
 }
 
-[dir="rtl"] .flex-col {
-  flex-direction: column;
-}
-
-[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
-  margin-right: 1.5rem;
-  margin-left: 0;
-}
-
-[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  margin-right: 2rem;
-  margin-left: 0;
-}
-
-[dir="rtl"] .mr-2 {
-  margin-right: 0;
-  margin-left: 0.5rem;
-}
-
-[dir="rtl"] .mr-3 {
-  margin-right: 0;
-  margin-left: 0.75rem;
-}
-
-[dir="rtl"] .mr-4 {
-  margin-right: 0;
-  margin-left: 1rem;
-}
-
-[dir="rtl"] .ml-2 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-[dir="rtl"] .ml-auto {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* Language toggle specific RTL adjustments */
-[dir="rtl"] .language-toggle {
+[dir="rtl"] .rtl-flex {
   flex-direction: row-reverse;
 }
 
@@ -574,36 +534,16 @@
   text-align: right;
 }
 
-[dir="rtl"] .text-left {
-  text-align: right;
-}
-
-[dir="rtl"] .text-center {
-  text-align: center;
-}
-
-/* Button RTL adjustments */
-[dir="rtl"] .button-primary,
-[dir="rtl"] .button-secondary {
+/* Navigation specific RTL */
+[dir="rtl"] .nav-links {
   flex-direction: row-reverse;
 }
 
-/* Navigation RTL adjustments */
-[dir="rtl"] .nav-link {
-  text-align: right;
-}
-
-/* Card RTL adjustments */
-[dir="rtl"] .feature-card,
-[dir="rtl"] .glass-card {
-  text-align: right;
-}
-
-/* List RTL adjustments */
-[dir="rtl"] ul,
-[dir="rtl"] ol {
-  padding-right: 1rem;
-  padding-left: 0;
+/* Button icon RTL */
+[dir="rtl"] .button-icon {
+  order: -1;
+  margin-left: 0.5rem;
+  margin-right: 0;
 }
 
 /* Preserve specific LTR elements */

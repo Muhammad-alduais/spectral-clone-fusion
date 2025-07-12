@@ -13,7 +13,7 @@ export const useTranslation = () => {
   const [language, setLanguage] = useState<Language>(() => {
     // Get language from localStorage or default to 'en'
     const savedLanguage = localStorage.getItem('language') as Language;
-    return savedLanguage || 'en';
+    return (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ar')) ? savedLanguage : 'en';
   });
 
   useEffect(() => {
@@ -40,20 +40,21 @@ export const useTranslation = () => {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
-        // Fallback to English if key not found
-        value = translations.en;
+        // Fallback to English if key not found in current language
+        let fallbackValue: any = translations.en;
         for (const fallbackKey of keys) {
-          if (value && typeof value === 'object' && fallbackKey in value) {
-            value = value[fallbackKey];
+          if (fallbackValue && typeof fallbackValue === 'object' && fallbackKey in fallbackValue) {
+            fallbackValue = fallbackValue[fallbackKey];
           } else {
+            console.warn(`Translation key "${key}" not found in ${language} or English fallback`);
             return key; // Return key if not found in fallback
           }
         }
-        break;
+        return fallbackValue;
       }
     }
     
-    return value !== undefined ? value : key;
+    return value;
   };
 
   const changeLanguage = (newLanguage: Language) => {

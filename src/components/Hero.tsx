@@ -118,7 +118,7 @@ const Hero = () => {
       
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
-          <div className="w-full lg:w-1/2">
+          <div className={cn("w-full lg:w-1/2", isRTL && "lg:order-2")}>
             <div 
               className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.1s" }}
@@ -165,7 +165,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+          <div className={cn("w-full lg:w-1/2 relative mt-6 lg:mt-0 preserve-ltr", isRTL && "lg:order-1")}>
             {lottieData ? (
               <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
                 <LottieAnimation 

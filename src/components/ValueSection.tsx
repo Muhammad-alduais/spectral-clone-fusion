@@ -141,11 +141,14 @@ const ValueSection = () => {
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
                     {t('value.aiFeatures.title')}
                   </h3>
-                  <ul className="text-white/90 space-y-2">
-                    {t('value.aiFeatures.items').map((item: string, index: number) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
+                  <div className="text-white/90 space-y-2">
+                    {Array.isArray(t('value.aiFeatures.items')) ? 
+                      t('value.aiFeatures.items').map((item: string, index: number) => (
+                        <div key={index}>{item}</div>
+                      )) : 
+                      <div>{t('value.aiFeatures.items')}</div>
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -178,11 +181,14 @@ const ValueSection = () => {
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
                     {t('value.speed.title')}
                   </h3>
-                  <ul className="text-white/90 space-y-2">
-                    {t('value.speed.items').map((item: string, index: number) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
+                  <div className="text-white/90 space-y-2">
+                    {Array.isArray(t('value.speed.items')) ? 
+                      t('value.speed.items').map((item: string, index: number) => (
+                        <div key={index}>{item}</div>
+                      )) : 
+                      <div>{t('value.speed.items')}</div>
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -215,11 +221,14 @@ const ValueSection = () => {
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
                     <span dangerouslySetInnerHTML={{ __html: t('value.cultural.title') }} />
                   </h3>
-                  <ul className="text-white/90 space-y-2">
-                    {t('value.cultural.items').map((item: string, index: number) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
+                  <div className="text-white/90 space-y-2">
+                    {Array.isArray(t('value.cultural.items')) ? 
+                      t('value.cultural.items').map((item: string, index: number) => (
+                        <div key={index}>{item}</div>
+                      )) : 
+                      <div>{t('value.cultural.items')}</div>
+                    }
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,11 +261,14 @@ const ValueSection = () => {
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
                     <span dangerouslySetInnerHTML={{ __html: t('value.adoption.title') }} />
                   </h3>
-                  <ul className="text-white/90 space-y-2">
-                    {t('value.adoption.items').map((item: string, index: number) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
+                  <div className="text-white/90 space-y-2">
+                    {Array.isArray(t('value.adoption.items')) ? 
+                      t('value.adoption.items').map((item: string, index: number) => (
+                        <div key={index}>{item}</div>
+                      )) : 
+                      <div>{t('value.adoption.items')}</div>
+                    }
+                  </div>
                 </div>
               </div>
             </div>

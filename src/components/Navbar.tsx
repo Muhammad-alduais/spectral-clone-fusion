@@ -69,7 +69,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-6 xl:space-x-8">
+        <nav className={cn("hidden lg:flex space-x-6 xl:space-x-8", isRTL && "space-x-reverse")}>
           <a 
             href="#" 
             className="nav-link"
