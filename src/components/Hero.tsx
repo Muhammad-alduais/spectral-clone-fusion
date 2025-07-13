@@ -107,34 +107,36 @@ const Hero = () => {
   return (
     <OptimizedBackground
       src="/new-Header-background.png"
-      className="overflow-hidden relative"
+      className="overflow-hidden relative min-h-screen bg-gray-100"
       priority={true}
       style={{
         backgroundPosition: 'center 30%',
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
+      {/* Background overlay for better text contrast */}
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-10 blur-3xl rounded-full"></div>
       
-      <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-10" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
           <div className={cn("w-full lg:w-1/2", isRTL && "lg:order-2")}>
             <div 
-              className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in" 
+              className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in bg-pulse-100 text-pulse-600 border border-pulse-200" 
               style={{ animationDelay: "0.1s" }}
             >
               <span>{t('hero.badge')}</span>
             </div>
             
             <h1 
-              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
+              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in text-gray-900 font-bold" 
               style={{ animationDelay: "0.3s" }}
               dangerouslySetInnerHTML={{ __html: t('hero.title') }}
             />
             
             <p 
               style={{ animationDelay: "0.5s" }} 
-              className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
+              className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-700 font-normal text-base sm:text-lg text-left"
             >
               {t('hero.subtitle')}
             </p>
@@ -145,7 +147,7 @@ const Hero = () => {
             >
               <a 
                 href="#contact" 
-                className="flex items-center justify-center group w-full sm:w-auto text-center" 
+                className="flex items-center justify-center group w-full sm:w-auto text-center shadow-lg hover:shadow-xl transition-all duration-300" 
                 style={{
                   backgroundColor: '#4942E4',
                   borderRadius: '1440px',
@@ -176,7 +178,7 @@ const Hero = () => {
               </div>
             ) : (
               <>
-              <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
+              <div className="absolute inset-0 bg-gray-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
               <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl animate-fade-in" style={{ animationDelay: "0.9s" }}>
                 <OptimizedImage 
                   ref={imageRef} 
