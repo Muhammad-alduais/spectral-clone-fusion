@@ -80,12 +80,12 @@ const Navbar = () => {
           >
             {t('nav.home')}
           </a>
-          <a href="#value" className="nav-link preserve-ltr">{t('nav.value')}</a>
-          <a href="#platform" className="nav-link preserve-ltr">{t('nav.platform')}</a>
-          <a href="#industries" className="nav-link preserve-ltr">{t('nav.industries')}</a>
-          <a href="#erp-solutions" className="nav-link preserve-ltr">{t('nav.solutions')}</a>
-          <a href="#services" className="nav-link preserve-ltr">{t('nav.services')}</a>
-          <a href="#contact" className="nav-link preserve-ltr">{t('nav.contact')}</a>
+          <a href="#value" className="nav-link">{t('nav.value')}</a>
+          <a href="#platform" className="nav-link">{t('nav.platform')}</a>
+          <a href="#industries" className="nav-link">{t('nav.industries')}</a>
+          <a href="#erp-solutions" className="nav-link">{t('nav.solutions')}</a>
+          <a href="#services" className="nav-link">{t('nav.services')}</a>
+          <a href="#contact" className="nav-link">{t('nav.contact')}</a>
         </nav>
 
         {/* Language Switcher - Desktop */}

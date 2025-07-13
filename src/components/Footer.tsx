@@ -1,9 +1,10 @@
 import React from "react";
 import { Twitter, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, isRTL } = useTranslation();
   
   const socialLinks = [
     { icon: Twitter, href: "#", label: "Twitter" },
