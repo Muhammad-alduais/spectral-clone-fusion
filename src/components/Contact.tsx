@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, MessageCircle, Calendar, Users, Send, CheckCircle,
 import emailjs from '@emailjs/browser';
 import { toast } from "sonner";
 import { useTranslation } from "@/hooks/useTranslation";
+import { cn } from "@/lib/utils";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -392,7 +393,7 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
                   <a 
                     key={index}
                     href={info.link}
-                    className={cn("flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "flex-row-reverse text-right")}
+                    className={`flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 ${isRTL ? "flex-row-reverse text-right" : ""}`}
                   >
                     <div className="flex items-center justify-center w-10 h-10 bg-pulse-100 rounded-lg mr-4">
                       <info.icon className="w-5 h-5 text-pulse-500" />
@@ -414,12 +415,12 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
                   <button 
                     key={index}
                     onClick={action.action}
-                    className={cn("w-full flex items-center p-4 bg-white border border-gray-200 rounded-lg hover:shadow-elegant-hover transition-all duration-200", isRTL && "flex-row-reverse text-right")}
+                    className={`w-full flex items-center p-4 bg-white border border-gray-200 rounded-lg hover:shadow-elegant-hover transition-all duration-200 ${isRTL ? "flex-row-reverse text-right" : ""}`}
                   >
                     <div className="flex items-center justify-center w-10 h-10 bg-pulse-100 rounded-lg mr-4">
                       <action.icon className="w-5 h-5 text-pulse-500" />
                     </div>
-                    <div className={cn("text-left", isRTL && "text-right")}>
+                    <div className={`text-left ${isRTL ? "text-right" : ""}`}>
                       <p className="font-medium text-gray-900">{action.title}</p>
                       <p className="text-sm text-gray-600">{action.description}</p>
                     </div>
