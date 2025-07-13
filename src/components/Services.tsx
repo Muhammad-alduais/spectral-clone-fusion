@@ -81,7 +81,6 @@ const Services = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <div className="section-header-badge animate-badge-float mb-8">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-pulse-500 text-white mr-3 text-sm font-bold">06</span>
             <span className="font-semibold">Professional Services</span>
           </div>
           <h2 className="section-header-title animate-header-glow">

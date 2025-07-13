@@ -226,7 +226,6 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
       <div className="section-container">
         <div className="text-center mb-16 opacity-0 animate-on-scroll">
           <div className="pulse-chip mx-auto mb-4">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">10</span>
             <span>{t('contact.badge')}</span>
           </div>
           <h2 className="section-title mb-4">{t('contact.title')}</h2>
