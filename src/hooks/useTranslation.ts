@@ -27,9 +27,14 @@ export const useTranslation = () => {
     // Add/remove RTL class for additional styling if needed
     if (language === 'ar') {
       document.documentElement.classList.add('rtl');
+      document.body.classList.add('rtl');
     } else {
       document.documentElement.classList.remove('rtl');
+      document.body.classList.remove('rtl');
     }
+
+    // Update page title based on language
+    document.title = language === 'ar' ? 'موفن وير - حلول تخطيط موارد المؤسسات' : 'MovinWare - ERP Solutions';
   }, [language]);
 
   const t = (key: string): any => {
@@ -59,6 +64,11 @@ export const useTranslation = () => {
 
   const changeLanguage = (newLanguage: Language) => {
     setLanguage(newLanguage);
+    
+    // Trigger a custom event for components that need to react to language changes
+    window.dispatchEvent(new CustomEvent('languageChanged', { 
+      detail: { language: newLanguage, isRTL: newLanguage === 'ar' } 
+    }));
   };
 
   const isRTL = language === 'ar';

@@ -80,12 +80,12 @@ const Navbar = () => {
           >
             {t('nav.home')}
           </a>
-          <a href="#value" className="nav-link">{t('nav.value')}</a>
-          <a href="#platform" className="nav-link">{t('nav.platform')}</a>
-          <a href="#industries" className="nav-link">{t('nav.industries')}</a>
-          <a href="#erp-solutions" className="nav-link">{t('nav.solutions')}</a>
-          <a href="#services" className="nav-link">{t('nav.services')}</a>
-          <a href="#contact" className="nav-link">{t('nav.contact')}</a>
+          <a href="#value" className="nav-link preserve-ltr">{t('nav.value')}</a>
+          <a href="#platform" className="nav-link preserve-ltr">{t('nav.platform')}</a>
+          <a href="#industries" className="nav-link preserve-ltr">{t('nav.industries')}</a>
+          <a href="#erp-solutions" className="nav-link preserve-ltr">{t('nav.solutions')}</a>
+          <a href="#services" className="nav-link preserve-ltr">{t('nav.services')}</a>
+          <a href="#contact" className="nav-link preserve-ltr">{t('nav.contact')}</a>
         </nav>
 
         {/* Language Switcher - Desktop */}
@@ -122,7 +122,7 @@ const Navbar = () => {
         <nav className="flex flex-col space-y-6">
           <a 
             href="#" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={(e) => {
               e.preventDefault();
               scrollToTop();
@@ -134,7 +134,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#value" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -144,7 +144,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#platform" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -154,7 +154,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#industries" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -164,7 +164,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#erp-solutions" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -174,7 +174,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#services" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -184,7 +184,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#contact" 
-            className="text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200" 
+            className={cn("text-lg font-medium py-4 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "text-right")}
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';

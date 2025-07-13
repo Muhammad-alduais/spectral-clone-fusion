@@ -19,8 +19,8 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "info@movinware.com" },
-    { icon: Phone, text: "+966 561820949" },
+    { icon: Mail, text: "info@movinware.com", className: "preserve-ltr email-address" },
+    { icon: Phone, text: "+966 561820949", className: "preserve-ltr phone-number" },
     { icon: MapPin, text: t('contact.info.location') }
   ];
 
@@ -89,9 +89,9 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-6">{t('footer.contact')}</h3>
               <ul className="space-y-4">
                 {contactInfo.map((contact, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
+                  <li key={index} className={cn("flex items-center text-gray-300", isRTL && "flex-row-reverse")}>
                     <contact.icon className="w-4 h-4 mr-3 text-pulse-500" />
-                    <span className="text-sm">{contact.text}</span>
+                    <span className={cn("text-sm", contact.className)}>{contact.text}</span>
                   </li>
                 ))}
               </ul>

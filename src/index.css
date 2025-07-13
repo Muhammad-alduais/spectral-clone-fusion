@@ -558,3 +558,129 @@
   direction: ltr;
   text-align: left;
 }
+
+/* Enhanced RTL Support */
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex-col {
+  flex-direction: column;
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: 1.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+/* RTL Grid adjustments */
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .grid > * {
+  direction: ltr;
+}
+
+/* RTL Modal and Dialog adjustments */
+[dir="rtl"] .fixed.right-0 {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .absolute.right-4 {
+  right: auto;
+  left: 1rem;
+}
+
+/* RTL Animation adjustments */
+[dir="rtl"] .translate-x-1 {
+  transform: translateX(-0.25rem);
+}
+
+[dir="rtl"] .hover\\:translate-x-1:hover {
+  transform: translateX(-0.25rem);
+}
+
+/* RTL specific component adjustments */
+[dir="rtl"] .section-container {
+  text-align: right;
+}
+
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* RTL Navbar adjustments */
+[dir="rtl"] .nav-link {
+  text-align: center;
+}
+
+/* RTL Form adjustments */
+[dir="rtl"] .form-input {
+  text-align: right;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* RTL Card adjustments */
+[dir="rtl"] .card {
+  text-align: right;
+}
+
+/* RTL Button adjustments */
+[dir="rtl"] .button-primary,
+[dir="rtl"] .button-secondary {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .button-primary .ml-2,
+[dir="rtl"] .button-secondary .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Language transition animations */
+.language-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Preserve LTR for specific elements */
+.preserve-ltr,
+.preserve-ltr * {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Numbers and codes should remain LTR */
+[dir="rtl"] .phone-number,
+[dir="rtl"] .email-address,
+[dir="rtl"] .code,
+[dir="rtl"] .number {
+  direction: ltr;
+  text-align: left;
+  display: inline-block;
+}

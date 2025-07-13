@@ -34,19 +34,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "info@movinware.com",
+      value: <span className="preserve-ltr">info@movinware.com</span>,
       link: "mailto:info@movinware.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+966 561820949",
+      value: <span className="preserve-ltr phone-number">+966 561820949</span>,
       link: "tel:+966561820949"
     },
     {
       icon: MapPin,
-      title: "Location",
-      value: "Online",
+      title: t('contact.info.location'),
+      value: t('contact.info.location'),
       link: "#"
     }
   ];
@@ -392,13 +392,13 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
                   <a 
                     key={index}
                     href={info.link}
-                    className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                    className={cn("flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200", isRTL && "flex-row-reverse text-right")}
                   >
                     <div className="flex items-center justify-center w-10 h-10 bg-pulse-100 rounded-lg mr-4">
                       <info.icon className="w-5 h-5 text-pulse-500" />
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">{info.title}</p>
+                      <p className="font-medium text-gray-900">{typeof info.title === 'string' ? info.title : info.title}</p>
                       <p className="text-gray-600">{info.value}</p>
                     </div>
                   </a>
@@ -414,12 +414,12 @@ This message was sent via the MovinWare contact form on ${new Date().toLocaleDat
                   <button 
                     key={index}
                     onClick={action.action}
-                    className="w-full flex items-center p-4 bg-white border border-gray-200 rounded-lg hover:shadow-elegant-hover transition-all duration-200"
+                    className={cn("w-full flex items-center p-4 bg-white border border-gray-200 rounded-lg hover:shadow-elegant-hover transition-all duration-200", isRTL && "flex-row-reverse text-right")}
                   >
                     <div className="flex items-center justify-center w-10 h-10 bg-pulse-100 rounded-lg mr-4">
                       <action.icon className="w-5 h-5 text-pulse-500" />
                     </div>
-                    <div className="text-left">
+                    <div className={cn("text-left", isRTL && "text-right")}>
                       <p className="font-medium text-gray-900">{action.title}</p>
                       <p className="text-sm text-gray-600">{action.description}</p>
                     </div>
