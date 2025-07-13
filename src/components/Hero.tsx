@@ -6,7 +6,7 @@ import { OptimizedImage, OptimizedBackground } from "./ui";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, isRTL } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [lottieData, setLottieData] = useState<any>(null);

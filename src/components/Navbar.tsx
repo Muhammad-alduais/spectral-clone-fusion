@@ -5,7 +5,7 @@ import LanguageToggle from "./LanguageToggle";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Navbar = () => {
-  const { t } = useTranslation();
+  const { t, isRTL } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
